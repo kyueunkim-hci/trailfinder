@@ -1,0 +1,389 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAFAFA;
+    color: #181818;
+  }
+  
+  
+  /* Header Styles */
+  
+  .header {
+    background-color: transparent;
+    padding: 1.5rem 2rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+  
+  }
+  
+  .logo {
+    font-family: "glowworm-mn", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8rem;
+    color: #6FCC65;
+    letter-spacing: 0.5px;
+    width: auto;
+    text-align: left;
+    background-color: rgba(24, 24, 24, 0.9);
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 4px 0 #6FCC65;
+    text-decoration: none;
+  }
+  
+  
+  /* Filter 1 & 2 Bar */
+  
+  .filter-bar {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px;
+  }
+  
+  
+  /* Filter 1 & 2 Dropdowns */
+  
+  .filter-dropdown {
+    background-color: #ffffff;
+    border: 2px solid #181818;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    min-width: 140px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    height: 40px;
+    display: flex;
+    aligh-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .filter-dropdown:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 #181818;
+  }
+  
+  .filter-dropdown::after {
+    content: '▼';
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+    color: #181818;
+  }
+  
+  .filter-dropdown.active {
+    background-color: #6FCC65;
+    color: #181818;
+  }
+  
+  
+  /* Filter 1 & 2 - Dropdown Menu */
+  
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: white;
+    border: 2px solid #181818;
+    border-radius: 15px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 0 #181818;
+    scrollbar-width: none;
+    pointer-events: auto;
+  }
+  
+  .dropdown-menu.active {
+    display: block;
+  }
+  
+  
+  /* Filter 1 State - Dropdown Item */
+  
+  .dropdown-item {
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #C8E6C9;
+  }
+  
+  .dropdown-item.selected {
+    background-color: #C8E6C9;
+    font-weight: 700;
+  }
+  
+  
+  /* Filter 2 Activities - Dropdown Checkbox */
+  
+  .checkbox-container {
+    padding: 0.7rem 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer
+  }
+  
+  .checkbox-container:hover {
+    background-color: #C8E6C9
+  }
+  
+  .checkbox-container input {
+    margin-right: 0.8rem;
+    width: 16px;
+    height: 16px;
+    accent-color: #43A047;
+  }
+  
+  .checkbox-container label {
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  
+  /* Theme Buttons */
+  
+  .theme-button {
+    background-color: #ffffff;
+    border: 2px solid #181818;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    min-width: 140px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #181818;
+  }
+  
+  .theme-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 #181818;
+    color: #181818;
+  }
+  
+  .theme-button.active {
+    background-color: #FDD835;
+    color: #181818;
+  }
+  
+  
+  /* Map */
+  
+  .map-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  
+  #map {
+    height: 100%;
+    width: 100%;
+   }
+  
+  /* Map - Popup */
+  
+  .mapboxgl-popup {
+    max-width: 450px;
+  }
+  
+  .mapboxgl-popup-content {
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0,2);
+    overflow: hidden;
+  }
+  
+  .mapboxgl-popup-close-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #666;
+    right: 8px;
+    top: 8px;
+  
+    border-radius: 4px;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  
+  .mapboxgl-popup-close-button:hover {
+    opacity: 1;
+    color: #333;
+  }
+  
+  .park-popup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .park-popup .park-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+  }
+  
+  .park-popup .park-content {
+    padding: 20px;
+  }
+  
+  .park-popup h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #181818;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .park-popup .park-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  
+  .park-popup .park-link:hover {
+    color: #43A047;
+    text-decoration: underline;
+  }
+  
+  
+  /* Mobile Devices */
+  @media (max-width: 576px) {
+    
+    .header {
+      position: fixed;
+      padding: 0.8rem;
+      height: auto;
+    }
+  
+    .logo {
+      position: relative;
+      font-size: 1.5rem;
+      padding: 0.4rem 0.8rem;
+      width: 80%;
+    }
+    
+    .filter-bar {
+      position: relative;
+      top: 100px;
+      height: auto;
+      padding: 0.5rem;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: visible;
+      margin-bottom: 5px;    
+      min-height: 60px;
+      overflow: visible;
+      gap: 0.5rem;
+    }
+  
+    .filter-dropdown {
+      flex: 0 0 auto; 
+      min-width: 100px;
+      position: relative;
+      align-items: center;
+      padding: 0.4rem 0.8rem;
+      height: 36px;
+    } 
+    
+    .dropdown-menu {
+      max-height: 60vh;
+      overflow-y: auto;
+      z-index: 2000;
+    }
+    
+    .theme-button {
+      flex: 0 0 auto;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.8rem;
+      height: 36px;
+      margin-right: 8px;
+      min-width: auto;
+    }
+    
+    .mapboxgl-popup {
+      max-width: 60vw;
+      width: 60vw;
+    }
+    
+    .mapboxgl-popup-content {
+      max-height: 65vh; 
+      overflow-y: auto;
+    }
+    
+    .park-popup .park-image {
+      height: 110px;
+      object-fit: cover; 
+      flex-shrink: 0;
+    }
+    
+    .park-popup .park-content {
+      padding: 15px;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+    
+    .park-popup h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    
+    .park-popup .park-link {
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    
+    .park-popup .park-info p {
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+    
+    
+  }  
+  

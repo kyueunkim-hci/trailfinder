@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TrailFinder: Discover US National Parks</title>
+    <meta name="description" content="Find and explore US National Parks with interactive map and filtering capabilities">
+    <link rel="stylesheet" href="https://use.typekit.net/gml7tjr.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <header class="header" role="banner">
+      <a href="/" class="logo" aria-label="TrailFinder: Home Page">TrailFinder: Discover Your Next US National Park</a>
+    </header>
+    
+    <!-- Filter Bar -->  
+    <div class="filter-bar" role="toolbar" aria-label="Park filter options">
+      <!-- Filter 1: By State -->  
+      <div class="filter-dropdown" id="state-dropdown" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="state-menu">
+         <span id="state-dropdown-label">State</span>
+         <div class="dropdown-menu" id="state-menu" role="listbox" aria-labelledby="state-dropdown-label" tabindex="-1">
+         </div>
+      </div>
+     <!-- Filter 2: Activity -->
+      <div class="filter-dropdown" id="activity-dropdown" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="activity-menu">
+        <span id="activity-dropdown-label">Activities</span>
+        <div class="dropdown-menu" id="activity-menu" role="listbox" aria-labelledby="activity-dropdown-label" tabindex="-1">
+        </div>
+      </div>
+     <!-- Theme Buttons -->
+      <button class="theme-button" data-activity="program and tours" aria-pressed="false">Program / Tour</button>
+      <button class="theme-button" data-activity="wildlife watching" aria-pressed="false">Wildlife Watching</button>
+      <button class="theme-button" data-activity="camping" aria-pressed="false">Camping</button>
+    </div>
+  
+   <!-- Map -->
+   <div class="map-container" role="region" aria-label="Interactive map of National Parks">
+     <div id="map" aria-label="Map showing National Park locations" tabindex="0"></div>
+   </div>
+    
+   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+   <script src="script.js"></script>
+    
+</body>
+</html>
