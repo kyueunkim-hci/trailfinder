@@ -12,7 +12,7 @@ An interactive web application that helps users discover and explore US National
 - Real-time Data: Powered by the National Park Service API
 
 **🛠️ Technologies Used**
-Frontend: HTML5, CSS3, JavaScript (ES6+)
-Mapping: Mapbox GL JS
-API: National Park Service API
-Styling: Custom CSS with responsive design
+- Frontend: HTML5, CSS3, JavaScript (ES6+)
+- Mapping: Mapbox GL JS
+- API: National Park Service API
+- Styling: Custom CSS with responsive design
